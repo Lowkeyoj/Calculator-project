@@ -34,8 +34,14 @@ function gamePlay(playerSelection){
         console.log('Computer wins');
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'paper'){
         console.log('Computer wins');
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection.toLowerCase() == 'paper'){
+        console.log('Player wins');
+    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection.toLowerCase() == 'rock'){
+        console.log('Player  wins');
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection.toLowerCase() == 'rock'){
+        console.log('Computer wins');
     } else {
-        console.log('I am a winner in life !!!')
+        console.log('There has been a tie play again');
     }
 }  
 
