@@ -7,4 +7,14 @@ function getComputerChoice(X, Y, Z){
 }
 
 
-console.log(getComputerChoice(1, 2,));
+function getPlayerChoice(A, B, C){
+ if (A, B, C) {
+   return ('Rock'); 
+ } else if (B, C) {
+   return ('Paper'); 
+ } else (C) { 
+    return ('Scissors');
+ }
+
+}
+
