@@ -45,7 +45,17 @@ function gamePlay(playerSelection){
     }
 }  
 
-let test = prompt('This is a test');
-    console.log(gamePlay(test));
-    
-    
+
+
+let test = 'Rock'    
+let Q = 0;
+let W = 0;
+let I = 0;
+
+function keepScore(){
+return gamePlay(test);
+ }
+
+
+let automaticGamplay = keepScore();
+
