@@ -25,24 +25,27 @@ function getPlayerChoice(A, B, C){
  
 let playerSelection = getPlayerChoice;
     computerSelection = getComputerChoice();
- 
-
+   
+    
 function gamePlay(playerSelection){
     if(playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'scissors'){
-        console.log('Player wins');
+        return('Player wins');
     } else if (playerSelection.toLowerCase() == 'paper' && computerSelection.toLowerCase() == 'scissors'){
-        console.log('Computer wins');
+        return('Computer wins');
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'paper'){
-        console.log('Computer wins');
+        return('Computer wins');
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection.toLowerCase() == 'paper'){
-        console.log('Player wins');
+        return('Player wins');
     } else if (playerSelection.toLowerCase() == 'paper' && computerSelection.toLowerCase() == 'rock'){
-        console.log('Player  wins');
+        return('Player  wins');
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection.toLowerCase() == 'rock'){
-        console.log('Computer wins');
+        return('Computer wins');
     } else {
-        console.log('There has been a tie play again');
+        return('There has been a tie play again');
     }
 }  
 
-console.log(gamePlay('Rock'));
+let test = prompt('This is a test');
+    console.log(gamePlay(test));
+    
+    
