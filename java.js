@@ -25,7 +25,10 @@ function getPlayerChoice(A, B, C){
  
 let playerSelection = getPlayerChoice;
     computerSelection = getComputerChoice();
-   
+
+    
+let Computer = 0;
+let Player = 0;    
     
 function gamePlay(playerSelection){
     if(playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'scissors'){
@@ -37,25 +40,35 @@ function gamePlay(playerSelection){
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection.toLowerCase() == 'paper'){
         return('Player wins');
     } else if (playerSelection.toLowerCase() == 'paper' && computerSelection.toLowerCase() == 'rock'){
-        return('Player  wins');
+        return('Player wins');
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection.toLowerCase() == 'rock'){
         return('Computer wins');
     } else {
         return('There has been a tie play again');
-    }
-}  
+    }      
+} 
 
 
+function keepScore(playerSelection){
+    if(Computer <= 5 || Player <= 5){
+        Computer++;
+        Player++; 
+    }  
+    
+    if(gamePlay(playerSelection) == 'Computer wins'){
+     console.log(Computer);
+   } else console.log(Computer += 0);
+   
+    
 
-let test = 'Rock'    
-let Q = 0;
-let W = 0;
-let I = 0;
+    if(gamePlay(playerSelection) == 'Player wins'){
+        console.log(Player);
+    } else console.log(Player +=0);
 
-function keepScore(){
-return gamePlay(test);
- }
+       if(Player == 5){
+        alert('Player wins');
+       } else if(Computer == 5){
+        alert('Computer wins');
+       }
 
-
-let automaticGamplay = keepScore();
-
+}
