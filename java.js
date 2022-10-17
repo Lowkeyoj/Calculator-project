@@ -1,3 +1,5 @@
+// Allows for random computer choice //
+
 
 let random = Math.random();  
 let X = .33;
@@ -12,7 +14,7 @@ function getComputerChoice(){
  return ('Scissors');
 }
 
-
+//Allows from player to select either rock paper or scissors//
 function getPlayerChoice(A, B, C){
  if (A, B, C) {
    return ('Rock'); 
@@ -29,7 +31,9 @@ let playerSelection = getPlayerChoice;
     
 let Computer = 0;
 let Player = 0;    
-    
+
+//Runs the game with player input irregardless of upper or lowercase//
+
 function gamePlay(playerSelection){
     if(playerSelection.toLowerCase() == 'rock' && computerSelection.toLowerCase() == 'scissors'){
         return('Player wins');
@@ -49,26 +53,38 @@ function gamePlay(playerSelection){
 } 
 
 
-function keepScore(playerSelection){
-    if(Computer <= 5 || Player <= 5){
-        Computer++;
-        Player++; 
-    }  
+
+let test = 'rock';
+let    test2 = 'paper';
+let    test3 = 'scissors'; 
+
+
+
+//Test function calling the gamePlay(PlayerSelection) function to loop againt the computer for first to five//
+
+function keepScore(){
+    while(Computer <= 5 && Player <= 4 || Player <= 5 && Computer <= 4){
+
+    if(gamePlay(test2) == 'Computer wins'){
+     (Computer += 1)
+     
+   }else if(gamePlay(test2) == 'Player wins'){
+        (Player += 1)
+      
+   }else {(Player += 0) && (Computer += 0)}
     
-    if(gamePlay(playerSelection) == 'Computer wins'){
-     console.log(Computer);
-   } else console.log(Computer += 0);
    
-    
-
-    if(gamePlay(playerSelection) == 'Player wins'){
-        console.log(Player);
-    } else console.log(Player +=0);
-
+       
        if(Player == 5){
         alert('Player wins');
        } else if(Computer == 5){
         alert('Computer wins');
        }
+       
+       
+    
+    }
+
+    
 
 }
