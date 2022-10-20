@@ -1,16 +1,15 @@
 // Allows for random computer choice //
 
-
-let random = Math.random();  
+ 
 let X = .33;
 let Y = .66;
 let Z = .99;
 
 function getComputerChoice(){
- if (random < Z && random > Y) { return ('Rock');
-} else if  (random < Y && random > X) {
+ if (Math.random() < Z && Math.random() > Y) { return ('Rock');
+} else if  (Math.random() < Y && Math.random() > X) {
  return ('Paper');
-} else (random < X) 
+} else (Math.random() < X) 
  return ('Scissors');
 }
 
