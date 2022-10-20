@@ -14,7 +14,6 @@ function getComputerChoice() {
     return ('Scissors');
 }
 
-
 let Computer = 0;
 let Player = 0;
 
@@ -40,37 +39,28 @@ function gamePlay(playerSelection) {
 
 
 
-let test = 'rock';
-let test2 = 'paper';
-let test3 = 'scissors';
+//Test function calling the gamePlay(PlayerSelection) function keep score for first to five//
+
+function keepScore(playerSelection) {
+    if (Computer <= 5 || Player <= 5){
 
 
-
-//Test function calling the gamePlay(PlayerSelection) function to loop againt the computer for first to five//
-
-function keepScore() {
-    while (Computer <= 5 && Player <= 4 || Player <= 5 && Computer <= 4) {
-
-        if (gamePlay(test2) == 'Computer wins') {
-            (Computer += 1)
-
-        } else if (gamePlay(test2) == 'Player wins') {
-            (Player += 1)
-
-        } else { (Player += 0) && (Computer += 0) }
+       if (gamePlay(playerSelection) == 'Computer wins') 
+           console.log(Computer++);
+       
+                    else if (gamePlay(playerSelection) == 'Player wins') 
+                            console.log(Player++);
+                            
+                              else console.log((Player += 0) && (Computer += 0))
 
 
+                                                   if (Player == 5) 
+                                                       alert('Player wins')
+                                               
+                                                              if (Computer == 5) 
+                                                                   alert('Computer wins')
+                                                                        
 
-        if (Player == 5) {
-            alert('Player wins');
-        } else if (Computer == 5) {
-            alert('Computer wins');
-        }
-
-
-
-    }
-
-
+ }
 
 }
