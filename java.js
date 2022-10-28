@@ -42,25 +42,38 @@ function gamePlay(playerSelection) {
 //Test function calling the gamePlay(PlayerSelection) function keep score for first to five//
 
 function keepScore(playerSelection) {
-    if (Computer <= 5 || Player <= 5){
+    if (Computer < 4 && Player < 4){
 
 
-       if (gamePlay(playerSelection) == 'Computer wins') 
+    if (gamePlay(playerSelection) == 'Computer wins') 
            console.log(Computer++);
        
-                    else if (gamePlay(playerSelection) == 'Player wins') 
+    else if (gamePlay(playerSelection) == 'Player wins') 
                             console.log(Player++);
                             
-                              else console.log((Player += 0) && (Computer += 0))
+        else console.log((Player += 0) && (Computer += 0))
 
 
-                                                   if (Player == 5) 
-                                                       alert('Player wins')
+                if (Player == 3) 
+                alert('Player wins')
                                                
-                                                              if (Computer == 5) 
-                                                                   alert('Computer wins')
+                if (Computer == 3) 
+                alert('Computer wins')
                                                                         
 
  }
 
 }
+
+const div = document.querySelector('div');
+
+const unordered = document.createElement('ul');
+const list = document.createElement('li');
+
+unordered.appendChild(list);
+div.appendChild(unordered);
+
+const bt1 = document.querySelector('#bt1');
+const bt2 = document.querySelector('#bt2');
+const bt3 = document.querySelector('#bt3');
+
