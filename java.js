@@ -1,5 +1,4 @@
 // Allows for random computer choice //
-
 let X = .33;
 let Y = .66;
 let Z = .99;
@@ -13,8 +12,8 @@ function getComputerChoice() {
     return ('Scissors');
 }
 
-let Computer = 0;
-let Player = 0;
+let Computer = 1;
+let Player = 1;
 
 //Runs the game with player input irregardless of upper or lowercase//
 
@@ -36,8 +35,6 @@ function gamePlay(playerSelection) {
     }
 }
 
-
-
 //Test function calling the gamePlay(PlayerSelection) function keep score for first to five//
 
 function keepScore(playerSelection) {
@@ -45,12 +42,12 @@ function keepScore(playerSelection) {
 
 
     if (gamePlay(playerSelection) == 'Computer wins') 
-           console.log(Computer++);
+           list.textContent = (Computer++ + 'Computer score');
        
     else if (gamePlay(playerSelection) == 'Player wins') 
-                            console.log(Player++);
+            list.textContent = (Player++ + 'Player score');
                             
-        else console.log((Player += 0) && (Computer += 0))
+        else alert((Computer += 0 ))
 
 
                 if (Player == 3) 
@@ -76,6 +73,7 @@ const bt1 = document.querySelector('#bt1');
 const bt2 = document.querySelector('#bt2');
 const bt3 = document.querySelector('#bt3');
 
-bt1.onclick = () => keepScore('Rock');
-bt2.onclick = () => keepScore('Paper');
-bt3.onclick = () => keepScore('Scissors');
+let num1 = bt1.onclick = () => keepScore('Rock'); ;
+let num2 = bt2.onclick = () => keepScore('Paper'); ;
+let num3 = bt3.onclick = () => keepScore('Scissors'); ;
+
