@@ -1,6 +1,5 @@
 // Allows for random computer choice //
 
-
 let X = .33;
 let Y = .66;
 let Z = .99;
@@ -77,3 +76,6 @@ const bt1 = document.querySelector('#bt1');
 const bt2 = document.querySelector('#bt2');
 const bt3 = document.querySelector('#bt3');
 
+bt1.onclick = () => keepScore('Rock');
+bt2.onclick = () => keepScore('Paper');
+bt3.onclick = () => keepScore('Scissors');
