@@ -12,8 +12,8 @@ function getComputerChoice() {
     return ('Scissors');
 }
 
-let Computer = 1;
-let Player = 1;
+let Computer = 0;
+let Player = 0;
 
 //Runs the game with player input irregardless of upper or lowercase//
 
@@ -38,26 +38,27 @@ function gamePlay(playerSelection) {
 //Test function calling the gamePlay(PlayerSelection) function keep score for first to five//
 
 function keepScore(playerSelection) {
+    if (Player == 3){
+        alert('Player wins')
+    }
+    if  (Computer == 3){
+        alert('Computer wins')
+    }
+    
     if (Computer < 4 && Player < 4){
 
 
     if (gamePlay(playerSelection) == 'Computer wins') 
-           list.textContent = (Computer++ + 'Computer score');
+           list.textContent = `${Computer++} Computer score`;
        
     else if (gamePlay(playerSelection) == 'Player wins') 
-            list.textContent = (Player++ + 'Player score');
+            list.textContent = `${Player++} Player score`;
                             
-        else alert((Computer += 0 ))
+        else list.textContent = 'Its a tie play again';
 
-
-                if (Player == 3) 
-                alert('Player wins')
-                                               
-                if (Computer == 3) 
-                alert('Computer wins')
                                                                         
 
- }
+ } else return alert('This game is over');
 
 }
 
