@@ -44,7 +44,7 @@ function keepScore(playerSelection) {
     else if (gamePlay(playerSelection) == 'Player wins') 
             list.innerHTML = `${Player++} Player score`;
                             
-            else if (Player === 3){
+            else if(Player === 3){
                 alert('Player wins');
                 list.innerHTML = `${Player++} Player score`;
                 list2.innerHTML = 'Game over refresh to play again player won this round'
