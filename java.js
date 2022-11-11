@@ -1,16 +1,15 @@
 // Allows for random computer choice //
+let X = 3;
+let Y = 6;
+let Z = 10;
 
-
-let X = .33;
-let Y = .66;
-let Z = .99;
 
 function getComputerChoice() {
-    if (Math.random() < Z && Math.random() > Y) {
+    if(Math.floor(Math.random() * 10)  < Z && Math.floor(Math.random() * 10) > Y) {
         return ('Rock');
-    } else if (Math.random() < Y && Math.random() > X) {
+    } else if (Math.floor(Math.random() * 10) < Y && Math.floor(Math.random() * 10) > X) {
         return ('Paper');
-    } else (Math.random() < X)
+    } else (Math.floor(Math.random() * 10) < X)
     return ('Scissors');
 }
 
@@ -32,35 +31,56 @@ function gamePlay(playerSelection) {
         return ('Player wins');
     } else if (playerSelection.toLowerCase() == 'scissors' && getComputerChoice().toLowerCase() == 'rock') {
         return ('Computer wins');
-    } else {
-        return ('There has been a tie play again');
-    }
+    } 
 }
-
-
 
 //Test function calling the gamePlay(PlayerSelection) function keep score for first to five//
 
 function keepScore(playerSelection) {
-    if (Computer <= 5 || Player <= 5){
 
-
-       if (gamePlay(playerSelection) == 'Computer wins') 
-           console.log(Computer++);
+    if (gamePlay(playerSelection) == 'Computer wins') 
+           list.innerHTML = `${Computer++} Computer score`;
        
-                    else if (gamePlay(playerSelection) == 'Player wins') 
-                            console.log(Player++);
+    else if (gamePlay(playerSelection) == 'Player wins') 
+            list.innerHTML = `${Player++} Player score`;
                             
-                              else console.log((Player += 0) && (Computer += 0))
+            else if (Player === 3){
+                alert('Player wins');
+                list.innerHTML = `${Player++} Player score`;
+                list2.innerHTML = 'Game over refresh to play again player won this round'
+            }
+            else if (Computer === 3){
+                alert('Computer wins');
+                list.innerHTML = `${Computer++} Computer score`;
+                list2.innerHTML = 'Game over refresh to play again computer won' 
+                        
+            }  
+                else list.innerHTML = 'Its a tie play again';
 
+                                        
 
-                                                   if (Player == 5) 
-                                                       alert('Player wins')
-                                               
-                                                              if (Computer == 5) 
-                                                                   alert('Computer wins')
-                                                                        
-
- }
+ 
 
 }
+
+const div = document.querySelector('div');
+
+const unordered = document.createElement('ul');
+const list = document.createElement('li');
+const list2 = document.createElement('li');
+
+unordered.appendChild(list2);
+unordered.appendChild(list);
+div.appendChild(unordered);
+list.style.listStyleType = 'none';
+list2.style.listStyleType = 'none';
+
+
+const bt1 = document.getElementById('bt1');
+const bt2 = document.getElementById('bt2');
+const bt3 = document.getElementById('bt3');
+
+let num1 = bt1.onclick = () => keepScore('Rock'); ;
+let num2 = bt2.onclick = () => keepScore('Paper'); ;
+let num3 = bt3.onclick = () => keepScore('Scissors'); ;
+
